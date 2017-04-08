@@ -1,0 +1,16 @@
+<h1><%= @item.name%></h1>
+<h4>
+<%= "Size: #{@item.size}" if @item.size%><br>
+<%= "Quantity: #{@item.quantity}" if @item.quantity%><br>
+<%= "Price: $#{@item.price}" if @item.price%><br>
+<%= "Description: #{@item.description}" if @item.description%>
+</h4>
+
+<h4>Comments about this Posting</h4>
+<section class='comments'>
+  <%= render partial: "items/comment", collection: @item.comments.reverse %>
+</section>
+
+<h4>Add a Comment</h4>
+<%= render partial: "comments/form" %>
+

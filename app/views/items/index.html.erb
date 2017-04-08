@@ -1,0 +1,14 @@
+
+<% @items.each do |item|%>
+
+<div class = "flex-item">
+
+<h3><%= item.name%><br></h3>
+<%#= image_tag item.image %>
+$<%= item.price%><br>
+<%= link_to "Buy", item_path(item)%>
+
+</div>
+<% end %>
+
+
